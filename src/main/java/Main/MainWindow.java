@@ -18,27 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainWindow extends Application {
-    private static final String URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=";
-    private static final String KEY = "&key=AIzaSyDsxIyAMEYNxF5s4KqcP2hA0trTYzi5ZaU";
-    private static final int HEIGHT = 500;
-    private static final int WIDTH = 650;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    @Override
-    public void start(Stage stage) {
-        Group root = new Group();
-
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-        windowSetUp(stage);
-
-        uiSetup(root);
-    }
 
     private void uiSetup(Group root) {
         TextField searchText = new TextField();
@@ -81,12 +61,4 @@ public class MainWindow extends Application {
         root.getChildren().addAll(vBox);
     }
 
-    private void windowSetUp(Stage stage) {
-        stage.setTitle("YouTube API(core)");
-        stage.setMinHeight(HEIGHT);
-        stage.setMinWidth(WIDTH);
-
-        stage.setMinHeight(HEIGHT);
-        stage.setMinHeight(WIDTH);
-    }
 }
